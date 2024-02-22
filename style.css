@@ -1,0 +1,323 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Star Wars', sans-serif;
+}
+
+body {
+	height: 100vh;
+	background-image: url("img/space.png");
+}
+
+.container {
+	width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container__title {
+	margin: 1rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    -webkit-text-stroke: .5px black;
+	line-height: 4rem;
+}
+
+
+
+.container__title:nth-child(2) {
+	line-height: 4rem;
+    margin-bottom: 2rem
+}
+
+.starwars-title {
+	color: #000;
+	-webkit-text-stroke: .5px yellow;
+}
+
+.container__img {
+	width: 300px;
+	height: 200px;
+}
+
+.container__button {
+	padding: 10px 20px;
+	border: 1px solid #fff;
+	font-size: 1.8rem;
+	color: #fff;
+	border-radius: 7px;
+	letter-spacing: 4px;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: all .5s ease;
+	background: #000;
+	margin: 2rem;
+	cursor: pointer;
+}
+
+.button-2 {
+	display: none;
+}
+
+.container__button:hover {
+	box-shadow: 0 0 25px #fff;
+	  transform: translate(0em, 0.3em);
+}
+
+.container-flags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+}
+
+.button-flag {
+    all: unset;
+    margin: 3rem;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.container-flags > button > img {
+    width: 100%;
+}
+
+  /* Modal Content/Box */
+.modal {
+    color: #fff;
+    font-family: sans-serif;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: rgb(0 0 0 / 50%);
+    margin: 5px auto;
+    width: 300px;
+    border: 4px solid #000;
+    border-radius: 10px;
+    box-shadow: 15px 15px 25px #000;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+.container-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border: 6px solid #FFF;
+}
+
+.container-modal__title {
+    font-size: 3rem;
+    margin: 10px;
+    text-align: center;
+}
+
+.container-modal__time, .container-modal__successes, .container-modal__text {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container-modal__button {
+    all: unset;
+    font-size: 2.3rem;
+    cursor: pointer;
+    border: 3px outset #ccc;
+    margin-top: 2rem;
+    padding:10px;
+    text-align: center;
+    transition: all .2s ease;
+}
+
+.container-modal__button:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.container-modal__button a {
+	all: unset;
+}
+
+.text {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	text-align: center;
+	color: #fff;
+}
+
+.copyright {
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: #fff;
+	margin: 2rem;
+}
+
+p a {
+    color: #25ff00;
+    font-weight: bold;
+}
+
+.container-game {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(80px, 110px));
+	
+	grid-template-rows: repeat(5, 90px);
+	align-items: center;
+	justify-content: center;
+	background: #363636
+}
+
+.card {
+	display: flex;
+	width: 100%;
+	height: 100%;
+    cursor: pointer;
+}
+
+.container-game-img {
+	display: none;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+    cursor: pointer;
+    transition: opacity .7s ease;
+    z-index: 10;
+    border: 5px solid #000;
+}
+
+.mostrar {
+	display: block;
+}
+
+.face-front {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+    cursor: pointer;
+    position: relative;
+	background: #ffb30b;
+	z-index: 100;
+	border: 5px solid #363636;
+}
+
+.card-end-title {
+	font-size: 2rem;
+	font-style: bold;
+}
+
+.fa-solid {
+	width: 25px;
+	margin: 10px;
+}
+
+.div-sound {
+	display: none;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 1rem;
+}
+
+.audio1, .audio2 {
+	display: flex;
+	align-items: center;
+}
+
+.text-sound {
+	font-family: sans-serif;
+	font-size: 1.8rem;
+	color: #fff;
+}
+
+.red {
+	color: red;
+}
+
+@media screen and (min-width: 600px){
+
+body {
+	height: 100vh;
+}	
+
+.container__title {
+	font-size: 4rem;
+}
+
+.container-game {
+	grid-template-columns: repeat(5, minmax(80px, 110px));
+	grid-template-rows: repeat(4, 110px);
+	padding: 20px;
+	gap: 1.5rem;
+}
+
+.container-game-img {
+    border: 5px solid #000;
+}
+
+.face-front {
+	border: 5px solid #000;
+}
+
+.container__button {
+	font-size: 3rem;
+}
+
+.text,.copyright {
+	font-size: 3rem;
+  }
+
+.text-sound {
+	font-family: sans-serif;
+	font-size: 2.5rem;
+	color: #fff;
+}
+
+.modal {
+	padding-top: 30px;
+}
+
+.modal-content {
+	width: 350px;
+}
+
+.container-modal__title {
+	font-size: 4.5rem;
+}
+
+.container-modal__time, .container-modal__successes, .container-modal__text  {
+	font-size: 2.5rem;
+}
+
+.container-modal__button {
+	font-size: 2.5rem;
+}
+}

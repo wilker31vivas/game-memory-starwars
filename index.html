@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Memoria Star Wars</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="icon/logo.png">
+	<link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<h1 class="container__title" id="container__title">Juego de Memoria</h1>
+		<h1 class="container__title"><span class="starwars-title">star wars</span></h1>
+		<img src="img/example.jpeg" alt="" class="container__img">
+		<button class="container__button">JUGAR</button>
+		<p class="text">¡Que disfrutes del juego y que la Fuerza te acompañe!</p>
+		
+		<div id="win" class="modal">
+			<div class="modal-content animate" action="/action_page.php">
+				<div class="container-modal">
+					<h1 class="container-modal__title">¡Pasaste el juego!</h1>
+					<h2 class="container-modal__time"></h2>
+					<h2 class="container-modal__successes"></h2>
+					<p class="container-modal__text">Puedes enviarme un capture a mi <a href="https://www.instagram.com/wilker31vivas/" target="_blank">instagram</a></p>
+					<button class="container-modal__button"><a href="https://memory-starwars.netlify.app">Volver a jugar</a></button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="div-sound">
+			<div class="audio1">
+				<p class="text-sound" id="sonido">Sonido de fondo:</p>
+				<img src="icon/volume-high-solid.svg" class="fa-solid" alt="" id="fondo">
+			</div>
+			<div class="audio2">
+				<p class="text-sound" id="efecto">Sonido de efecto:</p>
+				<img src="icon/volume-high-solid.svg" class="fa-solid" alt="" id="efecto">
+			</div>
+		</div>
+		<div class="container-flags">
+			<button class="button-flag button-spain"><img src="icon-flags/spain.png" alt=""></button>
+			<button class="button-flag button-brazil"><img src="icon-flags/brazil-.png" alt=""></button>
+			<button class="button-flag button-usa"><img src="icon-flags/united-states.png" alt=""></button>
+		</div>
+		<p class="copyright">Hecho por <a href="https://www.instagram.com/wilker31vivas/" target="_blank">Wilker</a></p>
+
+	</div>
+	<audio src="./audio/sound.mp3" id="audio" type="audio/mp3"></audio>
+	<audio src="./audio/theme.mp3" id="audioFondo" type="audio/mp3"></audio>
+	
+<script src="script.js"></script>
+</body>
+</html>
